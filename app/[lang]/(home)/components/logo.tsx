@@ -10,12 +10,11 @@ export const Logo = (props: Props) => {
   const { theme } = useTheme();
   const [currentTheme, setCurrentTheme] = useState(theme);
   useEffect(() => {
-    if (theme == "light") setCurrentTheme("light");
-    else setCurrentTheme("dark");
+    setCurrentTheme(theme);
   }, [theme]);
   return (
     <Image
-      src={currentTheme != "dark" ? dark : light}
+      src={currentTheme === "dark" ? light : dark}
       alt=""
       width={300}
       height={300}
