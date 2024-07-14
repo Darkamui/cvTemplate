@@ -10,7 +10,7 @@ type Props = {
 
 export const Header = ({ data }: Props) => {
   return (
-    <div className="flex flex-col items-center justify-center lg:justify-between min-h-[80vh]">
+    <div className="flex flex-col items-center justify-around min-h-[80vh]">
       <div className="flex flex-col max-w-screen-xl w-full gap-16 items-center justify-center mt-12">
         <div className="max-w-[250px] max-h-[250px] md:max-w-[350px] md:max-h-[350px] xl:max-w-[450px] xl:max-h-[450px] animate-in">
           <Image
