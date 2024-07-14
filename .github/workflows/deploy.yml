@@ -34,7 +34,7 @@ jobs:
           chmod 600 private_key
           rsync -avr -e "ssh -i private_key -o StrictHostKeyChecking=no" ./ ${VPS_USER}@${VPS_HOST}:/root/cvtemplate
           ssh -i private_key -o StrictHostKeyChecking=no ${VPS_USER}@${VPS_HOST} << 'EOF'
-            cd /root/cvtemplate
+            cd /root/cv-template
             npm install --production
             npm run build
             pm2 restart cv-template
