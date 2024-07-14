@@ -19,7 +19,7 @@ jobs:
           node-version: "20" # Use the version your app requires
 
       - name: Install dependencies
-        run: npm install
+        run: npm clean install
 
       - name: Build project
         run: npm run build
@@ -35,7 +35,7 @@ jobs:
           rsync -avr -e "ssh -i private_key -o StrictHostKeyChecking=no" ./ ${VPS_USER}@${VPS_HOST}:/root/cv-template
           ssh -i private_key -o StrictHostKeyChecking=no ${VPS_USER}@${VPS_HOST} << 'EOF'
             cd /root/cv-template
-            npm install --production
+            npm install --omit=dev
             npm run build
             pm2 restart cv-template
           EOF
