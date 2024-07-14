@@ -1,5 +1,65 @@
 {
   "navbar": {
     "cta": "Essaie Moi"
-  }
+  },
+  "header": {
+    "summary1": "Expert en",
+    "colorText": "développement logiciel full-stack",
+    "summary2": ", je maîtrise des technologies modernes telles que JavaScript, Next.js, Node.js, Docker et C# pour créer des applications performantes et évolutives. Engagé dans les pratiques DevOps, je mets en œuvre des pipelines CI/CD pour assurer des déploiements fluides et ininterrompus. Je gère également les bases de données, en définissant et maintenant des schémas sur SQL Server et PostgreSQL, garantissant ainsi une intégration complète et efficace."
+  },
+  "education": [
+    {
+      "headerTitle": "Éducation",
+      "location": "Cégep de Sept-Îles",
+      "program": "Techniques de l'informatique",
+      "startDate": "Août 2017",
+      "endDate": "Décembre 2020",
+      "result": "Dîplome d'Études Collégiales en Techniques de l'informatique"
+    }
+  ],
+  "workExperience": [
+    {
+      "headerTitle": "Expérience de travail",
+      "company": "Université du Québec à Chicoutimi",
+      "startDate": "Mars 2023",
+      "endDate": "August 2024",
+      "title": "Technicien en informatique (développeur full-stack)",
+      "content": [
+        "Conception, création et déploiement du système de gestion principale de l’université.",
+        "Développement sur les couches backend, frontend & data",
+        "Maintien et évolution d’une architecture n-tier en C# avec une conception MVVC (Modèle-Vue-VueModèle-Contrôleur).",
+        "Gestion de version et utilisation de bonnes pratiques CI/CD avec Azure DevOps.",
+        "Mise à jour et mise en place de schéma de données/scripts SQL Server.",
+        "Débogage de code existant."
+      ],
+      "duration": "17 mois"
+    },
+    {
+      "company": "Centre de Services Scolaires de la Jonquière",
+      "startDate": "July 2022",
+      "endDate": "Mars 2023",
+      "title": "Technicien en informatique (développeur full-stack)",
+      "content": [
+        "Conception, création et déploiement d’application C# (Blazor WASM).",
+        "Gestion des BD SQL Server/MySQL nécessaires aux applications.",
+        "Optimisation et automatisation des procédures de travail existantes.",
+        "Documentation complète des applications."
+      ],
+      "duration": "8 mois"
+    },
+    {
+      "company": "Propulsion Carrière",
+      "startDate": "May 2021",
+      "endDate": "November 2022",
+      "title": "Consultant TI (Technologies de l'Information)",
+      "content": [
+        "Gestion complète du parc informatique.",
+        "Gestion AD, Azure AD & Office365.",
+        "Création d’une application de gestion avec Laravel & MySQL. (incluant l'authentification Microsoft).",
+        "Création de documents et procédures informatiques.",
+        "Soutien technique."
+      ],
+      "duration": "18 mois"
+    }
+  ]
 }

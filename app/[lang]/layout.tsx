@@ -14,7 +14,7 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-sans" });
 
 // Default metadata
 export const metadata: Metadata = {
-  title: "CV Daniel Jerusalmy",
+  title: "Daniel Jerusalmy",
   description: "A simple curriculum vitae webapp using NextJS w/ ShadcnUI",
 };
 
