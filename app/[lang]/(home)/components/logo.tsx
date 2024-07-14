@@ -8,7 +8,7 @@ type Props = {};
 
 export const Logo = (props: Props) => {
   const { theme } = useTheme();
-  const [currentTheme, setCurrentTheme] = useState("");
+  const [currentTheme, setCurrentTheme] = useState(theme);
   useEffect(() => {
     if (theme == "light") setCurrentTheme("light");
     else setCurrentTheme("dark");
