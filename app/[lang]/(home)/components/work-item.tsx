@@ -1,6 +1,5 @@
 import { SlideUp } from "@/components/slide-up";
 import { WorkExperience } from "@/lib/types";
-import { getMonthsDifference } from "@/lib/utils";
 import { LucideArrowBigRight, LucideCircleArrowRight } from "lucide-react";
 import React from "react";
 

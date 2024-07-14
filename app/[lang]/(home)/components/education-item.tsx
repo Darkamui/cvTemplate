@@ -1,5 +1,5 @@
 import { SlideUp } from "@/components/slide-up";
-import { Education, WorkExperience } from "@/lib/types";
+import { Education } from "@/lib/types";
 import { LucideArrowBigRight, LucideCircleArrowRight } from "lucide-react";
 import React from "react";
 
