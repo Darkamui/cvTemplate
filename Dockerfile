@@ -56,16 +56,18 @@ RUN npm run build
 FROM base as final
 
 # Use production node environment by default.
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
-COPY --from=build /apps/cv-template/public ./public
+
+#COPY --from=build /apps/cv-template/public ./public
+
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
-COPY --from=build --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=build --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=build --chown=nextjs:nodejs /apps/cv-template/app/.next/standalone ./
+COPY --from=build --chown=nextjs:nodejs /apps/cv-template/app/.next/static ./.next/static
 
 USER nextjs
 
