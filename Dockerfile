@@ -85,4 +85,4 @@ COPY --from=build /apps/cv-template/app ./cv-template
 EXPOSE 3000
 
 # Run the application.
-CMD ["node" "server.js"]
+CMD ["npm" "start"]
