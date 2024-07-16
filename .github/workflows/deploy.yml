@@ -45,7 +45,7 @@ jobs:
           ssh -i private_key ${VPS_USER}@${VPS_HOST} << 'EOF'
             docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
             docker pull ${{ secrets.DOCKER_USERNAME }}/cv-template-nextjs:latest
-            docker stop cv-template-app || true
-            docker rm cv-template-app || true
-            docker run -d -p 3000:3000 --name cv-template-app ${{ secrets.DOCKER_USERNAME }}/cv-template-nextjs:latest
+            docker stop cv-template-run || true
+            docker rm cv-template-run || true
+            docker run -d -p 3000:3000 --name cv-template-run ${{ secrets.DOCKER_USERNAME }}/cv-template-nextjs:latest
           EOF
