@@ -13,18 +13,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
         with:
-          node-version: "20" # Use the version your app requires
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Install dependencies
-        run: npm install
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/cv-template-nextjs:latest
 
-      - name: Build project
-        run: npm run build
-
-      - name: Deploy to VPS
+      - name: SSH into VPS and Deploy
         env:
           SSH_PRIVATE_KEY: ${{ secrets.VPS_SSH_KEY }}
           VPS_HOST: ${{ secrets.VPS_HOST }}
@@ -32,10 +37,10 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key
           chmod 600 private_key
-          rsync -avr -e "ssh -i private_key -o StrictHostKeyChecking=no" ./ ${VPS_USER}@${VPS_HOST}:/root/cvtemplate
-          ssh -i private_key -o StrictHostKeyChecking=no ${VPS_USER}@${VPS_HOST} << 'EOF'
-            cd /root/cvtemplate
-            npm install
-            npm run build
-            pm2 restart cv-template
+          scp -i private_key docker-compose.yml ${VPS_USER}@${VPS_HOST}:/root/docker-compose.yml
+          ssh -i private_key ${VPS_USER}@${VPS_HOST} << 'EOF'
+            docker pull ${{ secrets.DOCKER_USERNAME }}/cv-template-nextjs:latest
+            docker stop cv-template-app || true
+            docker rm cv-template-app || true
+            docker run -d -p 3000:3000 --name cv-template-app ${{ secrets.DOCKER_USERNAME }}/cv-template-nextjs:latest
           EOF

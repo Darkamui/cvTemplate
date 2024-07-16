@@ -3,7 +3,7 @@ import { LucideCircleArrowDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+import heroImg from "@/assets/images/hero.webp";
 type Props = {
   data: HeaderType;
 };
@@ -14,7 +14,7 @@ export const Header = ({ data }: Props) => {
       <div className="flex flex-col max-w-screen-xl w-full gap-16 items-center justify-center mt-12">
         <div className="max-w-[250px] max-h-[250px] md:max-w-[350px] md:max-h-[350px] xl:max-w-[450px] xl:max-h-[450px] animate-in">
           <Image
-            src="https://contentstatic.techgig.com/photo/76220523/4-secrets-to-become-a-professional-programmer.jpg?140622"
+            src={heroImg}
             alt=""
             width={450}
             height={450}

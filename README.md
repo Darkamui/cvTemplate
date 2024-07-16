@@ -1,4 +1,4 @@
-# Simple CV display app using NextJS & ShadCN/UI
+# Simple CV display app using NextJS,ShadCN/UI & Docker
 
 ## Internationalization
 
@@ -11,3 +11,8 @@ Typical NextJS app
 
 - Run 'npm install'
 - To start a local session -> 'npm run dev'
+
+To run with Docker
+
+- Build the image 'docker build -t my-app' (linux)
+- Spin a container 'docker run -p -d 3000:3000 my-app my-app-container
