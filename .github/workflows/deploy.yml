@@ -43,6 +43,7 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > private_key
           chmod 600 private_key
           ssh -i private_key ${VPS_USER}@${VPS_HOST} << 'EOF'
+            docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
             docker pull ${{ secrets.DOCKER_USERNAME }}/cv-template-nextjs:latest
             docker stop cv-template-app || true
             docker rm cv-template-app || true
