@@ -2,6 +2,15 @@ export interface Navbar {
   cta: string;
 }
 
+export interface Theme {
+  light: string;
+  dark: string;
+}
+
+export interface SkillType {
+  headerTitle: string;
+}
+
 export interface WorkExperience {
   headerTitle?: string;
   company: string;
@@ -32,4 +41,6 @@ export interface Dictionary {
   workExperience: WorkExperience[];
   education: Education[];
   header: HeaderType;
+  theme: Theme;
+  skill: SkillType;
 }

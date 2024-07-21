@@ -3,6 +3,7 @@ import { Locale } from "@/i18n-config";
 import { Header } from "./components/header";
 import { WorkList } from "./components/work-list";
 import { EducationList } from "./components/education-list";
+import { SkillsList } from "./components/skills-list";
 
 export default async function Home({
   params: { lang },
@@ -15,6 +16,7 @@ export default async function Home({
       <Header data={dict.header} />
       <WorkList data={dict.workExperience} />
       <EducationList data={dict.education} />
+      <SkillsList data={dict.skill} />
     </main>
   );
 }

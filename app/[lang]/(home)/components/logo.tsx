@@ -8,16 +8,9 @@ type Props = {};
 
 export const Logo = (props: Props) => {
   const { theme } = useTheme();
-  const [currentTheme, setCurrentTheme] = useState(theme);
+  var [currentImg, setCurrentImg] = useState(light);
   useEffect(() => {
-    setCurrentTheme(theme);
+    setCurrentImg(theme === "dark" ? light : dark);
   }, [theme]);
-  return (
-    <Image
-      src={currentTheme === "dark" ? light : dark}
-      alt=""
-      width={300}
-      height={300}
-    />
-  );
+  return <Image src={currentImg} alt="" width={300} height={300} />;
 };

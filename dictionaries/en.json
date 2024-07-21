@@ -2,9 +2,16 @@
   "navbar": {
     "cta": "Try Me"
   },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "skill": {
+    "headerTitle": "Compétences"
+  },
   "header": {
     "summary1": "As a",
-    "colorText": "full-stack software developer",
+    "colorText": "full-stack developer",
     "summary2": ", I specialize in modern technologies like JavaScript, Next.js, Node.js, Docker, and C# to build robust and scalable applications. Dedicated to DevOps practices, I implement CI/CD pipelines to ensure seamless and continuous deployment. I also manage database operations by defining and maintaining schemas on SQL Server and PostgreSQL, ensuring a fully integrated and efficient system."
   },
   "education": [

@@ -16,8 +16,8 @@ export const EducationItem = ({ data }: Props) => {
           <LucideCircleArrowRight color="green" />
         </div>
         {/* Content container -  */}
-        <div className="flex flex-col w-full px-8 ">
-          <div className="flex">
+        <div className="flex flex-col w-full lg:px-8 ">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 px-8 lg:px-0">
             <div className="flex-1">
               <p className="font-bold text-xl">{data.location}</p>
               <p className="text-xl">{data.program}</p>
