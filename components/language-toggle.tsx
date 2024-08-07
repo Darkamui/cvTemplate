@@ -8,13 +8,13 @@ import us from "@/assets/images/us_64.png";
 
 export const LanguageToggle = ({ lang }: { lang: Locale }) => {
   return (
-    <Link passHref href={lang === "fr" ? "/en" : "fr"}>
+    <Link passHref href={lang === "fr" ? "/en" : "fr"} className="rounded-full">
       <Image
-        className="max-w-[35px] max-h-[35px] lg:max-w-[50px] lg:max-h-[50px]"
+        className="max-w-[35px] max-h-[35px] lg:max-w-[45px] lg:max-h-[45px]"
         src={lang === "fr" ? us : fr}
         alt="France flag"
-        width={50}
-        height={50}
+        width={45}
+        height={45}
         sizes=""
       />
     </Link>

@@ -26,6 +26,7 @@ export const EducationItem = ({ data }: Props) => {
               <div className="flex">
                 <p>{data.startDate}</p>
                 <LucideArrowBigRight color="green" />
+
                 <p>{data.endDate}</p>
               </div>
             </div>

@@ -4,7 +4,12 @@ import { getDictionary } from "@/dictionaries";
 import { Locale } from "@/i18n-config";
 import { Logo } from "@/app/[lang]/(home)/components/logo";
 import { LanguageToggle } from "./language-toggle";
-import { LucideMail } from "lucide-react";
+import {
+  Github,
+  LucideGitCommit,
+  LucideGithub,
+  LucideMail,
+} from "lucide-react";
 import Link from "next/link";
 
 export default async function Navbar({ lang }: { lang: Locale }) {
@@ -17,21 +22,27 @@ export default async function Navbar({ lang }: { lang: Locale }) {
         </div>
         <div className="flex items-center gap-2">
           <ThemeToggle dictionary={dict.theme} />
-          <div className="">
-            <Link
-              href="mailto:daniel@j-web.ca"
-              className="group relative inline-flex h-10 w-10 items-center justify-center overflow-hidden  dark:bg-neutral-950 bg-white
-              font-medium dark:text-neutral-200 text-black transition-all duration-300 lg:hover:w-56"
-            >
-              <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 lg:group-hover:-translate-x-3 lg:group-hover:opacity-100">
-                daniel@j-web.ca
-              </div>
-              <div className="absolute right-2.5">
-                <LucideMail size={20} />
-              </div>
-            </Link>
-          </div>
-
+          <Link
+            href="https://github.com/Darkamui/cvTemplate"
+            target="_blank"
+            rel="noreferrer"
+            className="group relative inline-flex h-10 w-10 items-center justify-center overflow-hidden  dark:bg-neutral-950 hover:dark:bg-neutral-950/50 bg-white
+              font-medium dark:text-neutral-200 text-black border rounded-full hover:bg-slate-400/50"
+          >
+            <Github size={20} />
+          </Link>
+          <Link
+            href="mailto:daniel@j-web.ca"
+            className="group relative inline-flex h-10 w-10 items-center justify-center overflow-hidden  dark:bg-neutral-950 bg-white
+              font-medium dark:text-neutral-200 text-black transition-all duration-300 lg:hover:w-56 border rounded-full"
+          >
+            <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 lg:group-hover:-translate-x-3 lg:group-hover:opacity-100">
+              daniel@j-web.ca
+            </div>
+            <div className="absolute right-2.5">
+              <LucideMail size={20} />
+            </div>
+          </Link>
           <LanguageToggle lang={lang} />
         </div>
       </div>

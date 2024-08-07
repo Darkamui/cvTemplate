@@ -15,7 +15,7 @@ export const WorkList = async ({ data }: Props) => {
       <div className="inline-block relative">
         <h6 className="text-3xl font-bold">{data[0].headerTitle}</h6>
       </div>
-      <div className="mt-12">
+      <div className="mt-12 flex flex-col gap-4">
         {data.map((workItem, i) => (
           <WorkItem data={workItem} key={i} />
         ))}

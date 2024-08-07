@@ -28,29 +28,68 @@
     {
       "headerTitle": "Work Experience",
       "company": "Université du Québec à Chicoutimi",
-      "startDate": "Mars 2023",
-      "endDate": "August 2024",
-      "title": "Technicien en informatique (développeur full-stack)",
+      "startDate": "March 2023",
+      "endDate": "present",
+      "title": "IT Technician (Full-Stack Developer)",
       "content": [
-        "Conception, création et déploiement du système de gestion principale de l’université.",
-        "Développement sur les couches backend, frontend & data",
-        "Maintien et évolution d’une architecture n-tier en C# avec une conception MVVC (Modèle-Vue-VueModèle-Contrôleur).",
-        "Gestion de version et utilisation de bonnes pratiques CI/CD avec Azure DevOps.",
-        "Mise à jour et mise en place de schéma de données/scripts SQL Server.",
-        "Débogage de code existant."
+        "Programming and deployment of the university's main management system (Atlas).",
+        "Version control and implementation of CI/CD best practices with Azure DevOps.",
+        "Debugging and maintenance of existing code."
       ],
-      "duration": "17 months"
+      "projects": [
+        {
+          "name": "Contributions made to the project: Atlas",
+          "tasks": [
+            "Work on the Common layer (database models, configuration, scripts, etc.)",
+            "Work on the Data layer (communication between the database and the application)",
+            "Work on the Services layer (communication between the application and the Data layer results)",
+            "Work on the API layer (web communication with the services)",
+            "Work on the Presentation layer (display on the Desktop client and Web platform)"
+          ]
+        }
+      ],
+      "duration": "0"
     },
     {
       "company": "Centre de Services Scolaires de la Jonquière",
       "startDate": "July 2022",
-      "endDate": "Mars 2023",
-      "title": "Technicien en informatique (développeur full-stack)",
+      "endDate": "March 2023",
+      "title": "IT Technician (Full-Stack Developer)",
       "content": [
-        "Conception, création et déploiement d’application C# (Blazor WASM).",
-        "Gestion des BD SQL Server/MySQL nécessaires aux applications.",
-        "Optimisation et automatisation des procédures de travail existantes.",
-        "Documentation complète des applications."
+        "Design, creation, and deployment of C# applications (Blazor WASM).",
+        "Optimization and automation of existing work procedures.",
+        "Comprehensive documentation of applications."
+      ],
+      "projects": [
+        {
+          "name": "Contributions made to the project: Copier Management",
+          "tasks": [
+            "Creation of a Blazor WASM application with MSAL authentication and a SQL database.",
+            "Complete management of copiers within CSSDLJ (copy count, details of each copier, etc.).",
+            "Use of Azure AI Builder to automatically process PDF invoices and insert their data into the database."
+          ]
+        },
+        {
+          "name": "Contributions made to the project: Vacation Management",
+          "tasks": [
+            "Creation of a Blazor WASM application with MSAL authentication and a SQL database.",
+            "Submission, visualization, and editing of vacation requests for CSSDLJ staff.",
+            "Pre-calculations on the vacation form to determine available leave for each employee based on database data.",
+            "Admin access for HR or others to view, confirm, or edit requests.",
+            "Automated emails for notifications."
+          ]
+        },
+        {
+          "name": "Contributions made to the project: CSSDLJ Management",
+          "tasks": [
+            "Creation of a Blazor WASM application with MSAL authentication and a SQL database.",
+            "Recreation of an old CSSDLJ module for administrative management.",
+            "Management of staff for each department.",
+            "Visual financial management for each department.",
+            "Employee portal to view status, salary history, etc.",
+            "Automated emails for notifications."
+          ]
+        }
       ],
       "duration": "8 months"
     },
@@ -58,13 +97,22 @@
       "company": "Propulsion Carrière",
       "startDate": "May 2021",
       "endDate": "November 2022",
-      "title": "Consultant TI (Technologies de l'Information)",
+      "title": "IT Consultant (Information Technology)",
       "content": [
-        "Gestion complète du parc informatique.",
-        "Gestion AD, Azure AD & Office365.",
-        "Création d’une application de gestion avec Laravel & MySQL. (incluant l'authentification Microsoft).",
-        "Création de documents et procédures informatiques.",
-        "Soutien technique."
+        "Comprehensive management of the IT infrastructure.",
+        "Management of Active Directory, Azure AD & Office 365.",
+        "Creation of IT documents and procedures.",
+        "Technical support."
+      ],
+      "projects": [
+        {
+          "name": "Contributions made to the project: BD-PC",
+          "tasks": [
+            "Creation of a full-stack Laravel (PHP) application with Microsoft authentication to manage the company's participants (clients).",
+            "Management of participants (participation dates, personal details, etc.).",
+            "Production of statistics on annual participation."
+          ]
+        }
       ],
       "duration": "18 months"
     }

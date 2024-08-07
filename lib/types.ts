@@ -7,6 +7,11 @@ export interface Theme {
   dark: string;
 }
 
+export interface Project {
+  name: string;
+  tasks: string[];
+}
+
 export interface SkillType {
   headerTitle: string;
 }
@@ -19,6 +24,7 @@ export interface WorkExperience {
   title: string;
   content: string[];
   duration: string;
+  projects: Project[];
 }
 
 export interface HeaderType {
