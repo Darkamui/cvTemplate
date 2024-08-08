@@ -10,6 +10,7 @@
     "headerTitle": "Compétences"
   },
   "header": {
+    "pdfDownload": "Télécharger mon CV en PDF",
     "summary1": "Étant",
     "colorText": "développeur full-stack",
     "summary2": ", je maîtrise des technologies modernes telles que JavaScript, Next.js, Node.js, Docker et C# pour créer des applications performantes et évolutives. Engagé dans les pratiques DevOps, je mets en œuvre des pipelines CI/CD pour assurer des déploiements fluides et ininterrompus. Je gère également les bases de données, en définissant et maintenant des schémas sur SQL Server et PostgreSQL, garantissant ainsi une intégration complète et efficace."

@@ -13,7 +13,7 @@ export default async function Home({
   const dict = await getDictionary(lang);
   return (
     <main className="flex min-h-screen flex-col items-center pb-8">
-      <Header data={dict.header} />
+      <Header data={dict.header} lang={lang} />
       <WorkList data={dict.workExperience} />
       <EducationList data={dict.education} />
       <SkillsList data={dict.skill} />

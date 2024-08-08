@@ -28,6 +28,7 @@ export interface WorkExperience {
 }
 
 export interface HeaderType {
+  pdfDownload: string;
   summary1: string;
   colorText: string;
   summary2: string;
