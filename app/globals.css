@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Adjust styles for 125% scaling
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 2000px) {
+  img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+} */
 @layer base {
   :root {
     --background: 0 0% 100%;

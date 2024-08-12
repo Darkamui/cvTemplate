@@ -9,7 +9,7 @@ type Props = {
 export const WorkList = async ({ data }: Props) => {
   return (
     <div
-      className="max-w-screen-xl min-h-screen w-full px-8 lg:px-0 flex flex-col justify-center"
+      className="max-w-screen-xl min-h-screen w-full px-2 md:px-6 flex flex-col justify-center"
       id="workExperience"
     >
       <div className="inline-block relative">

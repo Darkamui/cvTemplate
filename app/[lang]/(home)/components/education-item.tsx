@@ -19,8 +19,10 @@ export const EducationItem = ({ data }: Props) => {
         <div className="flex flex-col w-full lg:px-8 ">
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 px-8 lg:px-0">
             <div className="flex-1">
-              <p className="font-bold text-xl">{data.location}</p>
-              <p className="text-xl">{data.program}</p>
+              <p className="font-bold text-base md:text-lg lg:text-xl">
+                {data.location}
+              </p>
+              <p className="text-base md:text-lg lg:text-xl">{data.program}</p>
             </div>
             <div className="flex items-end flex-col">
               <div className="flex">
@@ -33,7 +35,7 @@ export const EducationItem = ({ data }: Props) => {
           </div>
 
           <ul className="list-disc pl-6 mt-2">
-            <li className="text-balance my-1 tracking-wide text-xl">
+            <li className="text-balance my-1 tracking-wide text-base md:text-lg lg:text-xl">
               {data.result}
             </li>
           </ul>

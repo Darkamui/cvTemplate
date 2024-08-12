@@ -53,8 +53,10 @@ export const WorkItem = ({ data }: Props) => {
         <div className="flex flex-col w-full lg:px-8">
           <div className="flex flex-col lg:flex-row gap-4 px-8 lg:px-0">
             <div className="flex-1">
-              <p className="font-bold text-xl">{data.company}</p>
-              <p className="text-xl">{data.title}</p>
+              <p className="font-bold text-base md:text-lg lg:text-xl">
+                {data.company}
+              </p>
+              <p className="text-base md:text-lg lg:text-xl">{data.title}</p>
             </div>
             <div className="flex items-end flex-col">
               <div className="flex">
@@ -90,7 +92,10 @@ export const WorkItem = ({ data }: Props) => {
               <div className="px-6">
                 <ul className="list-[circle] pl-6 mt-2">
                   {project.tasks.map((text, i) => (
-                    <li className="text-balance my-1 tracking-wide" key={i}>
+                    <li
+                      className="text-balance text-base md:text-lg lg:text-xl my-1 tracking-wide"
+                      key={i}
+                    >
                       {text}
                     </li>
                   ))}

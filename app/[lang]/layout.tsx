@@ -5,6 +5,7 @@ import ThemeProvider from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 import { i18n, type Locale } from "../../i18n-config";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -42,6 +43,7 @@ export default function RootLayout({
           <Navbar lang={params.lang} />
           {children}
         </ThemeProvider>
+        <TailwindIndicator />
       </body>
     </html>
   );

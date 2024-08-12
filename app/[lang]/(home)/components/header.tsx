@@ -19,12 +19,13 @@ export const Header = ({ data, lang }: Props) => {
   return (
     <div className="flex flex-col items-center justify-around min-h-[90vh]">
       <div className="flex flex-col max-w-screen-xl w-full gap-10 items-center justify-center mt-8">
-        <div className="max-w-[250px] max-h-[250px] md:max-w-[350px] md:max-h-[350px] xl:max-w-[450px] xl:max-h-[450px] animate-in">
+        <div className="w-full max-w-[250px]  md:max-w-[350px] xl:max-w-[450px] h-auto animate-in">
           <Image
             src={heroImg}
             alt=""
             width={450}
             height={450}
+            layout="responsive"
             className="rounded-full"
           />
         </div>

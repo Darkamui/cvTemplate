@@ -46,7 +46,7 @@ const skills = [
 export const SkillsList = async ({ data }: Props) => {
   return (
     <div
-      className="max-w-screen-xl  w-full px-8 lg:px-0 flex flex-col justify-center p-12"
+      className="max-w-screen-xl  w-full px-2 md:px-6 flex flex-col justify-center py-12"
       id="skills"
     >
       <div className="inline-block relative">
