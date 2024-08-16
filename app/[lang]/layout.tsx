@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 import { i18n, type Locale } from "../../i18n-config";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
@@ -35,6 +35,7 @@ export default function RootLayout({
           montserrat.variable
         )}
       >
+        <GoogleAnalytics gaId="G-FCMEKHE27Z" />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
